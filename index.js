@@ -13,9 +13,9 @@ app.use(parser.urlencoded({ extended: true}));
 
 app.use(parser.json());
 
-app.get("/", (req, res) => {
-    res.redirect("/api/users")
-});
+// app.get("/", (req, res) => {
+//     res.redirect("/api/users")
+// });
 //or to page with everyone's starting five?
 
 app.use("/api/users", usersController);
