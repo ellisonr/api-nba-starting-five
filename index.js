@@ -2,6 +2,7 @@ const express = require("express");
 const parser = require("body-parser");
 
 const usersController = require("./controllers/users")
+const startingFiveController = require("./controllers/startingFive")
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(parser.json());
 //or to page with everyone's starting five?
 
 app.use("/api/users", usersController);
+app.use("/api/startingfive", startingFiveController);
 
 app.set("port", process.env.PORT || 8080);
 

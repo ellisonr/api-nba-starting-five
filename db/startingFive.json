@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Ellison's Starting 5",
+        "players": [{
+            "player_id": 87987
+            }]
+    },
+    {
+        "name": "David's Starting 5",
+        "players": [{
+            "player_id": 12345
+            }]
+    }
+]
