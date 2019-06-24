@@ -27,3 +27,5 @@ router.delete("/:name", (req, res) => {
     });
 });
 //delete user by name
+
+module.exports = router
