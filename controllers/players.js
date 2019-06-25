@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
 const Player = require('../db/models/Player');
-const User = require('../db/models/User');
 
 router.get('/', (req, res) => {
 	Player.find({}).then(players => res.json(players));
@@ -29,10 +27,5 @@ router.delete('/:name', (req, res) => {
 	});
 });
 //delete player by playerName
-
-router.delete('/delete', (req, res) => {
-	Player.deleteMany({});
-});
-//delete many?
 
 module.exports = router;

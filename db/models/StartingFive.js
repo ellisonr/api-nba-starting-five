@@ -1,6 +1,6 @@
 const mongoose = require('../connection');
 
-const startingFiveSchema = new mongoose.Schema({
+const StartingFiveSchema = new mongoose.Schema({
 	name: String,
 	players: [
 		{
@@ -10,6 +10,6 @@ const startingFiveSchema = new mongoose.Schema({
 	],
 });
 
-const StartingFive = mongoose.model('StartingFive', startingFiveSchema);
+const StartingFive = mongoose.model('StartingFive', StartingFiveSchema);
 
 module.exports = StartingFive;
