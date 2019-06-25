@@ -31,9 +31,7 @@ router.delete('/:name', (req, res) => {
 //delete player by playerName
 
 router.delete('/delete', (req, res) => {
-	Player.deleteMany(req.body).then(player => {
-		res.json(player);
-	});
+	Player.deleteMany({});
 });
 //delete many?
 
