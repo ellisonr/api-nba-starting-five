@@ -4,8 +4,8 @@ const startingFiveSchema = new mongoose.Schema({
 	name: String,
 	players: [
 		{
-			type: mongoose.Schema.Types.ObjectId,
 			ref: 'Player',
+			type: mongoose.Schema.Types.ObjectId,
 		},
 	],
 });

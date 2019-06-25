@@ -7,8 +7,8 @@ const userSchema = new mongoose.Schema({
 	email: String,
 	starting_five: [
 		{
-			type: mongoose.Schema.Types.ObjectId,
 			ref: 'StartingFive',
+			type: mongoose.Schema.Types.ObjectId,
 		},
 	],
 });
