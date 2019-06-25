@@ -1,112 +1,106 @@
 [
-    {
-      "username": "d_buddy",
-      "full_name": "David Budimir",
-      "email": "dav.budimir@gmail.com",
-      "starting_five": [
-        {
-          "name": "International Starting Five",
-          "players": [
-            1717, 77845, 1938, 203507, 2225
-          ]
-        }
-      ]
-    },
+	{
+		"username": "d_buddy",
+		"full_name": "David Budimir",
+		"email": "dav.budimir@gmail.com",
+		"starting_five": [
+			{
+				"name": "International Starting Five",
+				"players": [1717, 77845, 1938, 203507, 2225]
+			}
+		]
+	},
 
-    {
-      "username": "shaktastic95",
-      "full_name": "Ismail Elshakankiry",
-      "email": "ismail@gmail.com",
-      "starting_five": [
-        {
-          "name": "Shak's 5",
-          "players": [
-            406, 2544, 977, 893, 947
-          ]
-        }
-      ]
-    },
-    {
-      "username": "DJPaulaB",
-      "full_name": "Paula Bannerman",
-      "email": "paula@gmail.com"
-    },
-    {
-      "username": "ashanevs",
-      "full_name": "Shane Vann-Shirley",
-      "email": "shane@gmail.com"
-    },
-    {
-      "username": "danabanana",
-      "full_name": "Dana Johnson",
-      "email": "dana@gmail.com"
-    },
-    {
-      "username": "pittsburghsean",
-      "full_name": "Sean Urbassik",
-      "email": "sean@gmail.com"
-    },
-    {
-      "username": "edotrio",
-      "full_name": "Ellison Rio",
-      "email": "ellison@gmail.com",
-      "starting_five": [
-        {
-          "name": "GOAT Dunkers",
-          "players": [
-            1713, 203897,1122, 431, 893
-          ]
-        }
-      ]
-    },
-    {
-      "username": "bigwillystyle",
-      "full_name": "Will Smith",
-      "email": "will@gmail.com"
-    },
-    {
-      "username": "mattyman",
-      "full_name": "Matt McDonnell",
-      "email": "matt@gmail.com"
-    },
-    {
-      "username": "tomatohammado",
-      "full_name": "Hammad Malik",
-      "email": "hammad@gmail.com"
-    },
-    {
-      "username": "ekells",
-      "full_name": "Erin Kelley",
-      "email": "erin@gmail.com"
-    },
-    {
-      "username": "doubleT",
-      "full_name": "Tishana Trainor",
-      "email": "trishana@gmail.com"
-    },
-    {
-      "username": "kingdavid",
-      "full_name": "Alex David",
-      "email": "alex@gmail.com"
-    },
-    {
-      "username": "iamthebatman",
-      "full_name": "Bruce Wayne",
-      "email": "bruce@gmail.com"
-    },
-    {
-      "username": "cubeExpert",
-      "full_name": "Jordan Mittelman",
-      "email": "jordan@gmail.com"
-    },
-    {
-      "username": "melras23",
-      "full_name": "Melika Rasti",
-      "email": "melika@gmail.com"
-    },
-    {
-      "username": "run15kAday",
-      "full_name": "Chris Traeger",
-      "email": "chris@gmail.com"
-    }
- ]
+	{
+		"username": "shaktastic95",
+		"full_name": "Ismail Elshakankiry",
+		"email": "ismail@gmail.com",
+		"starting_five": [
+			{
+				"name": "Shak's 5",
+				"players": [406, 2544, 977, 893, 947]
+			}
+		]
+	},
+	{
+		"username": "DJPaulaB",
+		"full_name": "Paula Bannerman",
+		"email": "paula@gmail.com"
+	},
+	{
+		"username": "ashanevs",
+		"full_name": "Shane Vann-Shirley",
+		"email": "shane@gmail.com"
+	},
+	{
+		"username": "danabanana",
+		"full_name": "Dana Johnson",
+		"email": "dana@gmail.com"
+	},
+	{
+		"username": "pittsburghsean",
+		"full_name": "Sean Urbassik",
+		"email": "sean@gmail.com"
+	},
+	{
+		"username": "edotrio",
+		"full_name": "Ellison Rio",
+		"email": "ellison@gmail.com",
+		"starting_five": [
+			{
+				"name": "GOAT Dunkers",
+				"players": [1713, 203897, 1122, 431, 893]
+			}
+		]
+	},
+	{
+		"username": "bigwillystyle",
+		"full_name": "Will Smith",
+		"email": "will@gmail.com"
+	},
+	{
+		"username": "mattyman",
+		"full_name": "Matt McDonnell",
+		"email": "matt@gmail.com"
+	},
+	{
+		"username": "tomatohammado",
+		"full_name": "Hammad Malik",
+		"email": "hammad@gmail.com"
+	},
+	{
+		"username": "ekells",
+		"full_name": "Erin Kelley",
+		"email": "erin@gmail.com"
+	},
+	{
+		"username": "doubleT",
+		"full_name": "Tishana Trainor",
+		"email": "trishana@gmail.com"
+	},
+	{
+		"username": "kingdavid",
+		"full_name": "Alex David",
+		"email": "alex@gmail.com"
+	},
+	{
+		"username": "iamthebatman",
+		"full_name": "Bruce Wayne",
+		"email": "bruce@gmail.com"
+	},
+	{
+		"username": "cubeExpert",
+		"full_name": "Jordan Mittelman",
+		"email": "jordan@gmail.com"
+	},
+	{
+		"username": "melras23",
+		"full_name": "Melika Rasti",
+		"email": "melika@gmail.com"
+	},
+	{
+		"username": "run15kAday",
+		"full_name": "Chris Traeger",
+		"email": "chris@gmail.com"
+	}
+]

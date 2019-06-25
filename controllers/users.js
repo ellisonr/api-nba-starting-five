@@ -1,31 +1,30 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
-const User = require("../db/models/User");
+const User = require('../db/models/User');
 
-router.get("/", (req, res) => {
-    User.find({}).then(users => res.json(users));
+router.get('/', (req, res) => {
+	User.find({}).then(users => res.json(users));
 });
 //get all users
 
-router.get("/:name", (req, res) => {
-    User.find({ name: req.params.name})
-    .then(user => res.json(user));
+router.get('/:name', (req, res) => {
+	User.find({ full_name: req.params.name }).then(user => res.json(user));
 });
-//get user by name
+//get user by full name
 
-router.post("/", (req, res) => {
-    User.create(req.body)
-    .then(user => res.json(user));
+router.post('/new', (req, res) => {
+	User.create(req.body).then(user => res.json(user));
 });
 //create user
 
-router.delete("/:name", (req, res) => {
-    User.findOneAndDelete({ name: req.params.name})
-    .then(user => {
-        res.json(user);
-    });
+router.delete('/:name', (req, res) => {
+	User.findOneAndDelete({ full_name: req.params.name }).then(user => {
+		res.json(user);
+	});
 });
-//delete user by name
+//delete user by full name
 
-module.exports = router
+module.exports = router;
+
+//ALL HAVE BEEN TESTED ON POSTMAN
