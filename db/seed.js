@@ -16,7 +16,7 @@ User.deleteMany({}).then(() => {
     })
 })
 
-        // users.forEach(user => {
-        //     user.starting_five.push({name: "my starting five"})
-        // })
-        // Users.save()
+// users.forEach(user => {
+//     user.starting_five.push({name: "my starting five"})
+// })
+// Users.save()

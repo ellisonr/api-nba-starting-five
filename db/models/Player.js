@@ -1,9 +1,13 @@
 const mongoose = require("../connection")
 
 const playerSchema = new mongoose.Schema({
-    person_id: Number,
-    name: String,
-    image_url: String,
+    careerAPG: Number,
+    careerPPG: Number,
+    careerRPG: Number,
+    playerID: Number,
+    playerImage: String,
+    playerName: String,
+    yearsActive: Number
 })
 
 const Player = mongoose.model("Player", playerSchema);
