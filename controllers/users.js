@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
 const User = require('../db/models/User');
 
 router.get('/', (req, res) => {
@@ -28,3 +27,5 @@ router.delete('/:name', (req, res) => {
 module.exports = router;
 
 //ALL HAVE BEEN TESTED ON POSTMAN
+
+//update

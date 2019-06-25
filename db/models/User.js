@@ -1,10 +1,13 @@
 const mongoose = require('../connection');
-// const StartingFive = require("./StartingFive")
+const uniqueValidator = require('mongoose-unique-validator');
 
 const userSchema = new mongoose.Schema({
 	username: String,
 	full_name: String,
-	email: String,
+	email: {
+		type: String,
+		unique: true,
+	},
 	starting_five: [
 		{
 			ref: 'StartingFive',
@@ -13,6 +16,7 @@ const userSchema = new mongoose.Schema({
 	],
 });
 
+userSchema.plugin(uniqueValidator);
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
