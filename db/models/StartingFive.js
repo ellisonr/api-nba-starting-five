@@ -1,12 +1,13 @@
 const mongoose = require("../connection")
 
-const startingFiveSchema = new mongoose.Schema({
+const StartingFiveSchema = new mongoose.Schema({
     name: String,
-    players: [{
-        player_id: Number
-    }]
+    players: []
+    //the player ID that's given to us
 })
 
-const StartingFive = mongoose.model("StartingFive", startingFiveSchema);
+// const StartingFive = mongoose.model("StartingFive", startingFiveSchema);
 
-module.exports = StartingFive;
+module.exports = StartingFiveSchema;
+
+// WE DON'T NEED THIS MODEL ANYMORE RIGHT?

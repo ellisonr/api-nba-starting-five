@@ -2,12 +2,29 @@
     {
       "username": "d_buddy",
       "full_name": "David Budimir",
-      "email": "dav.budimir@gmail.com"
+      "email": "dav.budimir@gmail.com",
+      "starting_five": [
+        {
+          "name": "International Starting Five",
+          "players": [
+            1717, 77845, 1938, 203507, 2225
+          ]
+        }
+      ]
     },
+
     {
       "username": "shaktastic95",
       "full_name": "Ismail Elshakankiry",
-      "email": "ismail@gmail.com"
+      "email": "ismail@gmail.com",
+      "starting_five": [
+        {
+          "name": "Shak's 5",
+          "players": [
+            406, 2544, 977, 893, 947
+          ]
+        }
+      ]
     },
     {
       "username": "DJPaulaB",
@@ -32,7 +49,15 @@
     {
       "username": "edotrio",
       "full_name": "Ellison Rio",
-      "email": "ellison@gmail.com"
+      "email": "ellison@gmail.com",
+      "starting_five": [
+        {
+          "name": "GOAT Dunkers",
+          "players": [
+            1713, 203897,1122, 431, 893
+          ]
+        }
+      ]
     },
     {
       "username": "bigwillystyle",
