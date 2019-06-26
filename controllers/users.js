@@ -79,10 +79,17 @@ router.get('/:name', (req, res) => {
 
 router.get('/id/:id', (req, res) => {
 	User.find({ _id: req.params.id })
-		.populate('starting_five', 'name')
+		.populate({
+			path: 'starting_five',
+			populate: {
+				path: 'players',
+				model: 'Player',
+			},
+		})
 		.exec((err, user) => res.json(user));
 });
 //get user by ID, populates starting five name
+//in
 
 router.post('/new', (req, res) => {
 	User.create(req.body).then(user => res.json(user));
