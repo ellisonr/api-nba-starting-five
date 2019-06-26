@@ -36,5 +36,5 @@ router.delete('/:name', (req, res) => {
 
 module.exports = router;
 
-//create, delete, update
+//update
 //one instance of creating a startingfive will update a full array/set

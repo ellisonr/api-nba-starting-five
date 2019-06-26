@@ -17,6 +17,13 @@ router.post('/new', (req, res) => {
 });
 //create user
 
+router.put('/edit/:email', (req, res) => {
+	User.findOneAndUpdate({ email: req.params.email }, req.body, {
+		new: true,
+	}).then(user => res.json(user));
+});
+//update user by email
+
 router.delete('/:name', (req, res) => {
 	User.findOneAndDelete({ full_name: req.params.name }).then(user => {
 		res.json(user);
@@ -27,5 +34,3 @@ router.delete('/:name', (req, res) => {
 module.exports = router;
 
 //ALL HAVE BEEN TESTED ON POSTMAN
-
-//update
