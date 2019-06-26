@@ -20,9 +20,9 @@ router.post('/new', (req, res) => {
 //create a new starting five; works
 
 router.put('/edit/:name', (req, res) => {
-	StartingFive.update({ name: req.params.name }, req.body, {
-		upsert: true,
-	});
+	StartingFive.findOneAndUpdate({ name: req.params.name }, req.body, {
+		new: true,
+	}).then(startingFive => res.json(startingFive));
 });
 
 router.delete('/:name', (req, res) => {

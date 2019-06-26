@@ -61,6 +61,7 @@ router.post('/login', (req, res) => {
 		res.sendStatus(401);
 	}
 });
+//sign up and login with jwt
 
 router.get('/', (req, res) => {
 	User.find({}).then(users => res.json(users));
