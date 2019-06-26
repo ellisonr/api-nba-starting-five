@@ -64,14 +64,25 @@ router.post('/login', (req, res) => {
 //sign up and login with jwt
 
 router.get('/', (req, res) => {
-	User.find({}).then(users => res.json(users));
+	User.find({})
+		.populate('starting_five', 'name')
+		.exec((err, user) => res.json(user));
 });
-//get all users
+//get all users, populates starting five name
 
 router.get('/:name', (req, res) => {
-	User.find({ full_name: req.params.name }).then(user => res.json(user));
+	User.find({ full_name: req.params.name })
+		.populate('starting_five', 'name')
+		.exec((err, user) => res.json(user));
 });
-//get user by full name
+//get user by full name, populates starting five name
+
+router.get('/id/:id', (req, res) => {
+	User.find({ _id: req.params.id })
+		.populate('starting_five', 'name')
+		.exec((err, user) => res.json(user));
+});
+//get user by ID, populates starting five name
 
 router.post('/new', (req, res) => {
 	User.create(req.body).then(user => res.json(user));
