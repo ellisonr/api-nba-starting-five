@@ -50,10 +50,18 @@ router.put('/edit/:name', (req, res) => {
 	}).then(startingFive => res.json(startingFive));
 });
 
+router.put('/id/:id', (req, res) => {
+	StartingFive.findOneAndUpdate({ _id: req.params.id }, req.body, {
+		new: true,
+	}).then(startingFive => res.json(startingFive));
+});
+
 router.delete('/:name', (req, res) => {
-	StartingFive.findOneAndDelete({ name: req.params.name }).then(startingFive => {
-		res.json(startingFive);
-	});
+	StartingFive.findOneAndDelete({ name: req.params.name }).then(
+		startingFive => {
+			res.json(startingFive);
+		}
+	);
 });
 //delete starting five by name; works
 
