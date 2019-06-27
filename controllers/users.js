@@ -65,17 +65,29 @@ router.post('/login', (req, res) => {
 
 router.get('/', (req, res) => {
 	User.find({})
-		.populate('starting_five', 'name')
+		.populate({
+			path: 'starting_five',
+			populate: {
+				path: 'players',
+				model: 'Player',
+			},
+		})
 		.exec((err, user) => res.json(user));
 });
-//get all users, populates starting five name
+//get all users, populates starting five and player stats; works
 
 router.get('/:name', (req, res) => {
 	User.find({ full_name: req.params.name })
-		.populate('starting_five', 'name')
+		.populate({
+			path: 'starting_five',
+			populate: {
+				path: 'players',
+				model: 'Player',
+			},
+		})
 		.exec((err, user) => res.json(user));
 });
-//get user by full name, populates starting five name
+//get user by full name, populates starting five and player stats; works
 
 router.get('/id/:id', (req, res) => {
 	User.find({ _id: req.params.id })
@@ -88,28 +100,32 @@ router.get('/id/:id', (req, res) => {
 		})
 		.exec((err, user) => res.json(user));
 });
-//get user by ID, populates starting five name
-//in
+//get user by ID, populates starting five and player stats; works
 
 router.post('/new', (req, res) => {
 	User.create(req.body).then(user => res.json(user));
 });
-//create user
+//create user; works
 
 router.put('/edit/:email', (req, res) => {
 	User.findOneAndUpdate({ email: req.params.email }, req.body, {
 		new: true,
 	}).then(user => res.json(user));
 });
-//update user by email
+//update user by email; works
 
 router.delete('/:name', (req, res) => {
 	User.findOneAndDelete({ full_name: req.params.name }).then(user => {
 		res.json(user);
 	});
 });
-//delete user by full name
+//delete user by full name; works
+
+router.delete('/id/:id', (req, res) => {
+	User.findOneAndDelete({ _id: req.params.id }).then(user => {
+		res.json(user);
+	});
+});
+//delete user by id; works
 
 module.exports = router;
-
-//ALL HAVE BEEN TESTED ON POSTMAN

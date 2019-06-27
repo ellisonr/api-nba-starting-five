@@ -4,17 +4,33 @@ const StartingFive = require('../db/models/StartingFive');
 
 router.get('/', (req, res) => {
 	StartingFive.find({})
-		.populate('players', 'playerName')
+		.populate({
+			path: 'players',
+			mode: 'Player',
+		})
 		.exec((err, startingFive) => res.json(startingFive));
 });
-//get all starting fives; works
+//get all starting fives, populates player stats; works
 
 router.get('/:name', (req, res) => {
 	StartingFive.find({ name: req.params.name })
-		.populate('players', 'playerName')
+		.populate({
+			path: 'players',
+			mode: 'Player',
+		})
 		.exec((err, startingFive) => res.json(startingFive));
 });
-//get starting five by name, populate playerName; works
+//get starting five by name, populates player stats; works
+
+router.get('/id/:id', (req, res) => {
+	StartingFive.find({ _id: req.params.id })
+		.populate({
+			path: 'players',
+			mode: 'Player',
+		})
+		.exec((err, startingFive) => res.json(startingFive));
+});
+//get starting five by id, populates player stats; works
 
 router.post('/new', (req, res) => {
 	StartingFive.create(req.body).then(startingFive => res.json(startingFive));
@@ -39,3 +55,10 @@ router.delete('/:name', (req, res) => {
 module.exports = router;
 
 //one instance of creating a startingfive will update a full array/set
+
+// /new replace /new
+//create new starting 5
+//req.body.lineup: name'', players []
+//findOneAndUpdate
+//find user by iD which is in req.body.user.userId
+//push starting 5 id into user.starting_five
