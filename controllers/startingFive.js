@@ -34,9 +34,13 @@ router.get('/id/:id', (req, res) => {
 //get starting five by id, populates player stats; works
 
 router.post('/new', (req, res) => {
-	StartingFive.create(req.body.lineup).then(startingFive => {
-		User.findOne({ _id: req.body.user.useId })
-	}
+	User.findOne({ _id: req.body.user.userId }).then(user => {
+		StartingFive.create(req.body.lineup).then(createdStartingFive => {
+			user.starting_five.push(createdStartingFive._id);
+			user.save();
+			res.json(user);
+		});
+	});
 });
 //create a new starting five; works
 

@@ -1,1 +1,17 @@
-{}
+[
+	{
+		"lineup": {
+			"name": "My Sweet Team",
+			"players": [
+				"5d13c3fb5600e70017b218c7",
+				"5d13fc241dec0c0017345752",
+				"5d13b15ea84c920017089e60",
+				"5d136a769ebc400017d998f8",
+				"5d136abb9ebc400017d998fc"
+			]
+		},
+		"user": {
+			"userId": "5d1273a9d2fa7300048bf86f"
+		}
+	}
+]
