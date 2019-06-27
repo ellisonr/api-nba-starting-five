@@ -21,6 +21,12 @@ router.post('/new', (req, res) => {
 //create player
 //req.body.TopFive
 
+router.put('/id/:id', (req, res) => {
+	Player.findOneAndUpdate({ _id: req.params.id }, req.body, {
+		new: true,
+	}).then(player => res.json(player));
+});
+
 router.delete('/:name', (req, res) => {
 	Player.findOneAndDelete({ playerName: req.params.name }).then(player => {
 		res.json(player);
