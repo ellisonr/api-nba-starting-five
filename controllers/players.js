@@ -8,7 +8,9 @@ router.get('/', (req, res) => {
 //get all players
 
 router.get('/:name', (req, res) => {
-	Player.find({ playerName: req.params.name }).then(player => res.json(player));
+	Player.find({ playerName: req.params.name }).then(player =>
+		res.json(player)
+	);
 });
 //get player by playerName
 
