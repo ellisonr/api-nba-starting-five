@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const StartingFive = require('../db/models/StartingFive');
+const User = require('../db/models/User');
 
 router.get('/', (req, res) => {
 	StartingFive.find({})
@@ -33,7 +34,9 @@ router.get('/id/:id', (req, res) => {
 //get starting five by id, populates player stats; works
 
 router.post('/new', (req, res) => {
-	StartingFive.create(req.body).then(startingFive => res.json(startingFive));
+	StartingFive.create(req.body.lineup).then(startingFive => {
+		User.findOne({ _id: req.body.user.useId })
+	}
 });
 //create a new starting five; works
 
@@ -44,11 +47,9 @@ router.put('/edit/:name', (req, res) => {
 });
 
 router.delete('/:name', (req, res) => {
-	StartingFive.findOneAndDelete({ name: req.params.name }).then(
-		startingFive => {
-			res.json(startingFive);
-		}
-	);
+	StartingFive.findOneAndDelete({ name: req.params.name }).then(startingFive => {
+		res.json(startingFive);
+	});
 });
 //delete starting five by name; works
 
