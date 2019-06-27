@@ -2,6 +2,8 @@
 
 ## Audience
 
+This API is intended to be used by an NBA Starting Five front-end found [here](https://github.com/dbudimir/nba-starting-five). Fans of the NBA would find this application both fun and resourceful. Every NBA fan, at one time or another, has had lively debates with fellow NBA fans about the best overall line-up or the 5 best dunkers or the 5 best center and so forth. This app allows users to create a profile, which will then allow the users to create all the different 5-player lineups their heart desires.
+
 ## Technologies Used
 
 -  API was created using Express, Mongoose, Node.js
