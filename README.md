@@ -4,7 +4,7 @@
 
 ## Audience
 
-This API is intended to be used by an NBA Starting Five front-end found [HERE](https://github.com/dbudimir/nba-starting-five). Fans of the NBA would find this application both fun and resourceful. Every NBA fan, at one time or another, has had lively debates with fellow NBA fans about their opinions on which players would make the best overall line-up or the 5 best dunkers or the 5 best center and so forth. This application allows users to create a profile consisting of all the different 5-player lineups their heart desires.
+This API is intended to be used by an NBA Starting Five front-end found [HERE](https://github.com/dbudimir/nba-starting-five). Fans of the NBA would find this application both fun and resourceful. Every NBA fan, at one time or another, has had lively debates with fellow NBA fans about their opinions on which players would make the best overall lineup or the 5 best dunkers or the 5 best center and so forth. This application allows users to create a profile consisting of all the different 5-player lineups their heart desires.
 
 ## Technologies Used
 
@@ -304,3 +304,13 @@ When set to "delete", this path allows a player to be deleted by name.
 ##### /api/players/id/:id
 
 When set to "delete", this path allows a player to be deleted by ID.
+
+## Prospective Feature Additions
+
+Page redirects to "Create A Lineup" after log-in.
+
+Clicking on a player's card directs user to a page using the same image, but listing out extended statistics like steals per game, blocks per game, and high school/university/country.
+
+Buttons for sharing to social media.
+
+Have data pulling from the back-end to avoid CORS errors.
