@@ -1,5 +1,7 @@
 # NBA Starting Five API
 
+![NBA Starting Five Screenshot](https://www.budimir.dev/starting-five-img.png)
+
 ## Audience
 
 This API is intended to be used by an NBA Starting Five front-end found [HERE](https://github.com/dbudimir/nba-starting-five). Fans of the NBA would find this application both fun and resourceful. Every NBA fan, at one time or another, has had lively debates with fellow NBA fans about their opinions on which players would make the best overall line-up or the 5 best dunkers or the 5 best center and so forth. This application allows users to create a profile consisting of all the different 5-player lineups their heart desires.

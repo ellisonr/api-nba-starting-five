@@ -36,6 +36,7 @@ router.post('/signup', (req, res) => {
 		res.sendStatus(401);
 	}
 });
+//allows sign-up with JWT
 
 router.post('/login', (req, res) => {
 	if (req.body.email && req.body.password) {
@@ -61,7 +62,7 @@ router.post('/login', (req, res) => {
 		res.sendStatus(401);
 	}
 });
-//sign up and login with jwt
+//allows log-in with JWT
 
 router.get('/', (req, res) => {
 	User.find({})
@@ -74,7 +75,7 @@ router.get('/', (req, res) => {
 		})
 		.exec((err, user) => res.json(user));
 });
-//get all users, populates starting five and player stats; works
+//get all users, populates starting five and player stats
 
 router.get('/:name', (req, res) => {
 	User.find({ full_name: req.params.name })
@@ -87,7 +88,7 @@ router.get('/:name', (req, res) => {
 		})
 		.exec((err, user) => res.json(user));
 });
-//get user by full name, populates starting five and player stats; works
+//get single user by full name, populates starting five and player stats
 
 router.get('/id/:id', (req, res) => {
 	User.find({ _id: req.params.id })
@@ -100,32 +101,32 @@ router.get('/id/:id', (req, res) => {
 		})
 		.exec((err, user) => res.json(user));
 });
-//get user by ID, populates starting five and player stats; works
+//get single user by _id, populates starting five and player stats
 
 router.post('/new', (req, res) => {
 	User.create(req.body).then(user => res.json(user));
 });
-//create user; works
+//create user
 
 router.put('/edit/:email', (req, res) => {
 	User.findOneAndUpdate({ email: req.params.email }, req.body, {
 		new: true,
 	}).then(user => res.json(user));
 });
-//update user by email; works
+//update single user by email
 
 router.delete('/:name', (req, res) => {
 	User.findOneAndDelete({ full_name: req.params.name }).then(user => {
 		res.json(user);
 	});
 });
-//delete user by full name; works
+//delete single user by full name
 
 router.delete('/id/:id', (req, res) => {
 	User.findOneAndDelete({ _id: req.params.id }).then(user => {
 		res.json(user);
 	});
 });
-//delete user by id; works
+//delete user by _id
 
 module.exports = router;

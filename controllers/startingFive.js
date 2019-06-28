@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 		})
 		.exec((err, startingFive) => res.json(startingFive));
 });
-//get all starting fives, populates player stats; works
+//get all starting fives, populates player stats
 
 router.get('/:name', (req, res) => {
 	StartingFive.find({ name: req.params.name })
@@ -21,7 +21,7 @@ router.get('/:name', (req, res) => {
 		})
 		.exec((err, startingFive) => res.json(startingFive));
 });
-//get starting five by name, populates player stats; works
+//get single starting five by name, populates player stats
 
 router.get('/id/:id', (req, res) => {
 	StartingFive.find({ _id: req.params.id })
@@ -31,7 +31,7 @@ router.get('/id/:id', (req, res) => {
 		})
 		.exec((err, startingFive) => res.json(startingFive));
 });
-//get starting five by id, populates player stats; works
+//get single starting five by _id, populates player stats
 
 router.post('/new', (req, res) => {
 	User.findOne({ _id: req.body.user.userId }).then(user => {
@@ -42,19 +42,21 @@ router.post('/new', (req, res) => {
 		});
 	});
 });
-//create a new starting five; works
+//create a new starting five
 
 router.put('/edit/:name', (req, res) => {
 	StartingFive.findOneAndUpdate({ name: req.params.name }, req.body, {
 		new: true,
 	}).then(startingFive => res.json(startingFive));
 });
+//update single starting five by name
 
 router.put('/id/:id', (req, res) => {
 	StartingFive.findOneAndUpdate({ _id: req.params.id }, req.body, {
 		new: true,
 	}).then(startingFive => res.json(startingFive));
 });
+//update single starting five by _id
 
 router.delete('/:name', (req, res) => {
 	StartingFive.findOneAndDelete({ name: req.params.name }).then(
@@ -63,15 +65,13 @@ router.delete('/:name', (req, res) => {
 		}
 	);
 });
-//delete starting five by name; works
+//delete single starting five by name
 
 router.delete('/id/:id', (req, res) => {
 	StartingFive.findOneAndDelete({ _id: req.params.id }).then(startingFive => {
 		res.json(startingFive);
 	});
 });
-//delete starting five by id; works
+//delete single starting five by _id
 
 module.exports = router;
-
-//one instance of creating a startingfive will update a full array/set
