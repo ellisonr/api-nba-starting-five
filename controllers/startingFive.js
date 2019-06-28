@@ -65,6 +65,12 @@ router.delete('/:name', (req, res) => {
 });
 //delete starting five by name; works
 
+router.delete('/id/:id', (req, res) => {
+	StartingFive.findOneAndDelete({ _id: req.params.id }).then(startingFive => {
+		res.json(startingFive);
+	});
+});
+
 module.exports = router;
 
 //one instance of creating a startingfive will update a full array/set
