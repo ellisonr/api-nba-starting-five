@@ -265,9 +265,17 @@ This path allows a starting five to be created.
 
 This path allows a starting five to be edited by name.
 
+##### /api/startingfive/id/:id
+
+This path allows a starting five to be edited by ID.
+
 ##### /api/startingfive/:name
 
 When set to "delete", this path allows a starting five to be deleted by name.
+
+##### /api/startingfive/id/:id
+
+When set to "delete", this path allows a starting five to be deleted by ID.
 
 ### Player
 
@@ -283,6 +291,14 @@ This path returns a single player by name.
 
 This path allows a new player to be created.
 
+##### /api/players/id/:id
+
+This path allows a player to be edited by ID.
+
 ##### /api/players/:name
 
 When set to "delete", this path allows a player to be deleted by name.
+
+##### /api/players/id/:id
+
+When set to "delete", this path allows a player to be deleted by ID.

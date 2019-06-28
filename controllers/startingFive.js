@@ -70,14 +70,8 @@ router.delete('/id/:id', (req, res) => {
 		res.json(startingFive);
 	});
 });
+//delete starting five by id; works
 
 module.exports = router;
 
 //one instance of creating a startingfive will update a full array/set
-
-// /new replace /new
-//create new starting 5
-//req.body.lineup: name'', players []
-//findOneAndUpdate
-//find user by iD which is in req.body.user.userId
-//push starting 5 id into user.starting_five
